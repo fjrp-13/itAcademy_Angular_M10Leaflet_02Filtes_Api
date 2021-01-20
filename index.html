@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mi mapa con filtros</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+</head>
+
+<body>
+  <div class="row">
+    <p>Tipos de restaurantes:
+      <span>
+        <select id='kind_food_selector'></select>
+      </span>
+    </p>
+  </div>
+
+  <div id="mapid" class="row"></div>
+  <style>
+    #mapid {
+      height: 400px;
+      height: 800px;
+    }
+
+    .rest-marker .rest-marker-name {
+      font-weight: bold;
+      text-align: center;
+      padding: 0.25em;
+      margin-bottom: 0.5em;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+    }
+
+    .rest-marker .rest-marker-photo {
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+
+    .rest-marker .rest-marker-photo img {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 100px;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script src='https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js'></script>
+  <script src='script.js'></script>
+
+</body>
+
+</html>
